@@ -7,22 +7,22 @@ const refs = {
 }
 
 const Theme = {
-    LIGHT: 'light-theme',
-    DARK: 'dark-theme',
-}
+  LIGHT: 'light-theme',
+  DARK: 'dark-theme',
+};
 
 function createMarkup(menu) {
     // const markup = menu.map(template);
     const markup = template(menu);
-    refs.listEl.insertAdjacentHTML('beforend', markup);
+    refs.listEl.insertAdjacentHTML('afterbegin', markup);
 }
 createMarkup(menu);
 
-refs.checkBox.addEventListener('change', checkedBoxChange);
+refs.checkBoxEl.addEventListener('change', checkedBoxChange);
 
 function checkedBoxChange(){
 
-    if(!refs.checkBox.checked) {
+    if(!refs.checkBoxEl.checked) {
       document.body.classList.add(Theme.LIGHT);
       document.body.classList.remove(Theme.DARK);
     } else {
