@@ -47,3 +47,4 @@ function update() {
   }
 }
 update();
+console.log('food service');
